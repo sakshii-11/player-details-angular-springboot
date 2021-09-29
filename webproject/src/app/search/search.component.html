@@ -1,0 +1,45 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-9 col-sm-12 mt-5">
+            <input type="text" placeholder="enter your fullname" class="form-control" name="fullname" [(ngModel)]="fullname">
+        </div>
+        <div class="col-lg-3 col-sm-12 mt-5">
+            <button type="button" class="btn btn-info" (click) = "findUserByFullname()" > Search</button>
+        </div>
+    </div>
+    <h2 class="mt-5">Results</h2>
+    <div class="row col-lg-12 col-sm-12">
+        <table class="table">
+            <tr>
+            <td> Fullname</td>
+                <td> Age</td>
+                <td> Major teams</td>
+                <td> country</td>
+                <td> bowling style</td>
+                <td> player role</td>
+                <td> batting style</td>
+                <td> password</td>
+
+            </tr>
+
+
+            <tbody>
+
+                <tr>
+                    <td>{{user.fullname}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.country}}</td>
+
+                    <td>{{user.majorteams}}</td>
+                    <td>{{user.playerrole}}</td>
+                    <td>{{user.battingstyle}}</td>
+                    <td>{{user.bowlingstyle}}</td>
+                    <td>{{user.password}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

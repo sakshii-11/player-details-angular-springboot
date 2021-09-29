@@ -1,0 +1,98 @@
+<div style="text-align: center">
+    <h3> {{message}} </h3>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <h4 class = "mt-3 mb-3">Registration Form</h4>
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="fullname">Full name</label>
+                        <input required type="text"  name="fullname" id="fullname" [(ngModel)]="user.fullname"
+                            class="form-control phone" maxlength="28" placeholder="Enter you full name" />
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input class="form-control" required type="number"  name="age" [(ngModel)]="user.age"
+                            id="age" placeholder="Enter your age" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="majorteams">Major teams</label>
+                        <input class="form-control" type="text" name="majorteams" id="txt" [(ngModel)]="user.majorteams"
+                            placeholder="Major teams placed" required />
+                    </div>
+
+                    <div clas ="form-group">
+                        <label for="country">Country:</label>
+
+                        <select class="form-control" name="country"  [(ngModel)]="user.country"  id="country"  placeholder="--Select your country--">
+                          <option value="india">India</option>
+                          <option value="australia">Australia</option>
+                          <option value="sri lanka">Sri lanka</option>
+                        </select>
+
+                    </div>
+
+                    
+                    <div clas ="form-group">
+                        <label for="playerrole">Player role:</label>
+
+                        <select class="form-control" name="playerrole" placeholder="select your role"  [(ngModel)]="user.playerrole" id="playerrole">
+                         
+                          <option value="bowling">bowling</option>
+                          <option value="batting">batting</option>
+                         
+                        </select>
+
+                    </div>
+                    <div clas ="form-group">
+                        <label for="battingstyle">Batting style:</label>
+
+                        <select class="form-control" name="battingstyle" placeholder="select your batting style" [(ngModel)]="user.battingstyle" id="battingstyle">
+                            <option>None</option>
+                          <option value="left">left handed</option>
+                          <option value="right">right handed</option>
+                        </select>
+
+                    </div>
+
+                    <div clas ="form-group">
+                        <label for="bowlingstyle">Bowling style:</label>
+
+                        <select class="form-control" name="bowlingstyle" [(ngModel)]="user.bowlingstyle" id="bowlingstyle" placeholder="select your bowling style">
+                          <option value="select">None</option>
+                          <option value="left">left handed</option>
+                          <option value="right">right handed</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" required type="password"  placeholder="enter password" [(ngModel)]="user.password" name="password" 
+                            id="password" placeholder="Enter your password" />
+                    </div>
+                    
+    
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                        <br/>  
+                        <small class="float-right btextual" [routerLink]="['/login']">Existing user ? Login here</small>
+
+
+                        <input class="btn" type="submit" name="submit_reg" value="Login"  routerLink = "/login">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
